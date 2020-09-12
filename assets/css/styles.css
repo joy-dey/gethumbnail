@@ -1,0 +1,189 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        /* background-color: #e53935; */
+        background-image: linear-gradient(45deg, #e53935, #ef5350);
+        height: 100vh;
+    }
+    
+    main {
+        width: 75%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 1.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    main>h1 {
+        font-size: 3rem;
+        color: #ffffff;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    main>.input-group {
+        margin-top: 1.5rem;
+        width: 100%;
+        position: relative;
+    }
+    
+    main>.input-group>input {
+        padding: .9rem 1rem;
+        display: block;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        outline: 0;
+        border: 0;
+        border-radius: 40px;
+        margin-bottom: 1rem;
+        transition: box-shadow .5s ease;
+    }
+    
+    main>.input-group>input:focus {
+        box-shadow: 0 4px 15px -2px rgba(34, 34, 34, .25);
+    }
+    
+    main>.input-group>button {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 4px;
+        right: 20px;
+        bottom: 0;
+        border: 0;
+        background-color: #eb4744;
+        outline: 0;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    main>.input-group>button>svg {
+        fill: #ffffff;
+    }
+    
+    .image-holder {
+        margin-top: 4em;
+        grid-column: span 1;
+        background-color: #fff;
+        padding: 1.4rem 1.2rem;
+        max-width: 350px;
+        border-radius: 5px;
+        display: none;
+    }
+    
+    .image-holder>img {
+        width: 100%;
+        height: auto;
+        background-color: #f1f1f1;
+        margin-bottom: 1rem;
+        box-shadow: 0 5px 25px rgba(34, 34, 34, .25);
+        user-select: none;
+        pointer-events: none;
+        border-radius: 20px;
+    }
+    
+    .image-holder>a {
+        font-family: 'Poppins', sans-serif;
+        font-size: .8rem;
+        text-decoration: none;
+        color: #ffffff;
+        padding: .6rem 1rem;
+        background-color: #ea4541;
+        border-radius: 20px;
+    }
+    
+    .error {
+        background-color: #333;
+        color: #ffffffde;
+        width: calc(100vw - 30%);
+        padding: .8rem 1rem;
+        border-radius: 4px;
+        box-shadow: 0 5px 11px 0 rgba(34, 34, 34, .25), 0 1px 20px rgba(34, 34, 34, .15);
+        transition: .4s background-color ease-in-out;
+        font-size: .9rem;
+        font-weight: normal;
+        position: fixed;
+        bottom: 30px;
+        display: none;
+    }
+    
+    .error-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .error-container>img {
+        margin-right: 10px;
+    }
+    
+    .error>#errorText {
+        margin-bottom: 0;
+    }
+    
+    @media(max-width: 567px) {
+        main {
+            width: 95%;
+        }
+        main>h1 {
+            font-size: 2rem;
+        }
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #333333;
+            background-image: none;
+        }
+        main>.input-group>input {
+            padding: .9rem 1rem;
+            display: block;
+            width: calc(100% - 30px);
+            margin: 0 auto;
+            outline: 0;
+            border: 0;
+            border-radius: 40px;
+            color: #f1f1f1;
+            margin-bottom: 1rem;
+            transition: box-shadow .5s ease;
+            background: #333333;
+            box-shadow: 4px 4px 9px #2b2b2b, -4px -4px 9px #3b3b3b;
+            transition: all .4s ease-in-out;
+        }
+        main>.input-group>input:active,
+        main>.input-group>input:focus {
+            background: #333333;
+            box-shadow: inset 4px 4px 9px #2b2b2b, inset -4px -4px 9px #3b3b3b;
+        }
+        main>.input-group>button {
+            background: #eb4744;
+            box-shadow: inset 4px 4px 7px #c83c3a, inset -4px -4px 7px #ff524e;
+        }
+        .image-holder {
+            background: #333333;
+            box-shadow: 27px 27px 54px #2b2b2b, -27px -27px 54px #3b3b3b;
+            border-radius: 20px;
+        }
+        .image-holder>a {
+            background: #ea4541;
+            box-shadow: inset 4px 4px 7px #c73b37, inset -4px -4px 7px #ff4f4b;
+        }
+        .error {
+            background-color: #f1f1f1;
+            color: #121212;
+        }
+    }
