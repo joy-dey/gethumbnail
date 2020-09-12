@@ -150,16 +150,7 @@
             background-image: none;
         }
         main>.input-group>input {
-            padding: .9rem 1rem;
-            display: block;
-            width: calc(100% - 30px);
-            margin: 0 auto;
-            outline: 0;
-            border: 0;
-            border-radius: 40px;
             color: #f1f1f1;
-            margin-bottom: 1rem;
-            transition: box-shadow .5s ease;
             background: #333333;
             box-shadow: 4px 4px 9px #2b2b2b, -4px -4px 9px #3b3b3b;
             transition: all .4s ease-in-out;
@@ -175,8 +166,11 @@
         }
         .image-holder {
             background: #333333;
-            box-shadow: 27px 27px 54px #2b2b2b, -27px -27px 54px #3b3b3b;
+            box-shadow: 20px 20px 20px #2b2b2b, -20px -20px 20px #3b3b3b;
             border-radius: 20px;
+        }
+        .image-holder>img {
+            box-shadow: none;
         }
         .image-holder>a {
             background: #ea4541;
